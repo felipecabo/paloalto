@@ -109,5 +109,5 @@ DATESCRIPT=`date +%F_%H_%M_%S`
        mv "$TEMPDIR/${PANW}.xml" "backup_panw_"${PANW}_${DATESCRIPT}.xml && smbclient ${FSSERVER} -W ${FSDOMAIN} -U ${FSUSER_PASS} -c "prompt; recurse; mput *.xml" && rm -rf $TEMPDIR/*.xml
 
 
-##   ;)
+##  
 
