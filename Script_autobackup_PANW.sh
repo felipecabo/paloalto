@@ -24,7 +24,7 @@
 # -	To generate the Key/Token on Palo Alto use the follow syntax:					    - #
 # -	https://${HOST}/api/type=keygen&user=${USER}&password=${PW}					    - #
 # -                                                                                                         - #
-# -	E.g.: https://10.1.1.18/api/?type=keygen&user=felipe&password=12345				    - #
+# -	E.g.: https://10.1.1.1/api/?type=keygen&user=felipe&password=12345				    - #
 # -                                                                                                         - #
 # -	This script downloads the backup file to a temporary diretory and moves it to a local directory	    - #
 # -	or to a remote HTTP, FTP or File Server.							    - #
@@ -38,10 +38,10 @@
 # ----------------------------------------------------------------------------------------------------------- #
 
 ## PANW access Token/Key (insert the Token/Key generated via XML API):
-KEY='1LUFRPT1WU1pNVmoyZFhMTHN6MmhnbWFBNitxZmprbWc9THBrYUZTLzhodHA5WHE3QTN3bzNBdz09'
+KEY='1LUFRPT1W9vS589KU1pNVmoyZFhMTHN6MmhnbWFBNitxZmprbWc9THBrYUZTLzhodHA5WHE3QTN877azNBdz09'
 
 ## PANW Hostname or IP
-PANW='10.1.1.18'
+PANW='10.1.1.1'
 
 ## Local temp dir
 TEMPDIR='/tmp'
@@ -62,14 +62,14 @@ DATESCRIPT=`date +%F_%H_%M_%S`
 #	BACKUPDIR='/root/backup'
 
 ## HTTP Server to upload and permanently store the backup files
-#	HTTPSERVER='10.1.1.53:8080/Folder'
+#	HTTPSERVER='10.1.1.50:8080/Folder'
 
 ## FTP Server and credentials to permanenttly store the backup files
-#	FTPSERVER='10.1.1.53'
+#	FTPSERVER='10.1.1.50'
 #	FTPUSER_PASS='user:password'
 
 ## File Server and credentials to permanenttly store the backup files
-	FSSERVER='//10.1.1.53/Folder'
+	FSSERVER='//10.1.1.50/Folder'
 	FSUSER_PASS='user%password'
 	FSDOMAIN='corp'
 
