@@ -18,7 +18,7 @@
 # -	And it uses CURL to connect to the PANW firewall through XML API ang get the backup data;	    - #
 # -	To generate the Key/Token the user needs to have permition to access the PANW running-config via    - #
 # - 	XML API.											    - #
-# -	The script uses only the access Key/Token to get the running-config data on PANW, so the user       - #
+# -	The script uses only the API Key to get the running-config data on PANW, so the user       - #
 # -	credencial is not necessary.									    - #
 # -													    - #
 # -	To generate the Key/Token on Palo Alto use the follow syntax:					    - #
@@ -37,7 +37,7 @@
 # -                                   VARIABLES DEFINITIONS				       		    - #
 # ----------------------------------------------------------------------------------------------------------- #
 
-## PANW access Token/Key (insert the Token/Key generated via XML API):
+## PANW API Key (insert the API Key generated via XML API):
 KEY='1LUFRPT1W9vS589KU1pNVmoyZFhMTHN6MmhnbWFBNitxZmprbWc9THBrYUZTLzhodHA5WHE3QTN877azNBdz09'
 
 ## PANW Hostname or IP
@@ -109,5 +109,5 @@ DATESCRIPT=`date +%F_%H_%M_%S`
        mv "$TEMPDIR/${PANW}.xml" "backup_panw_"${PANW}_${DATESCRIPT}.xml && smbclient ${FSSERVER} -W ${FSDOMAIN} -U ${FSUSER_PASS} -c "prompt; recurse; mput *.xml" && rm -rf $TEMPDIR/*.xml
 
 
-##  
+##
 
